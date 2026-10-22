@@ -7,12 +7,13 @@ const conexao = mysql.createConnection({
 });
 
 
-conexao.connect((err) => {
-    if (err) {
-        console.error("Erro ao conectar ao banco de dados:", err);
+conexao.connect((error) => {
+    if (error) {
+        console.error("Erro ao conectar ao banco de dados:", error);
         return;
     }
     console.log("Conectado ao banco sistema_musica com sucesso!");
 });
 
 module.exports = conexao;
+
